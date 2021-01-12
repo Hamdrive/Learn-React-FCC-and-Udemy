@@ -1,19 +1,25 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-function Greeting() {
+const fName = "Hamza";
+const luckyNumber = Math.floor(Math.random() * 10);
+
+function App() {
   return (
     <div>
-      <h1>HELLO WORLD AND WELCOME TO MY VERY FIRST REACT APP</h1>
+      <h1>
+        <u>With Curly Brackets</u>
+      </h1>
+      <h3>
+        Hello {fName}, Your Lucky Number is {luckyNumber}!
+      </h3>
       <br />
-      <h3>Here I will:</h3>
-      <ul>
-        <li>Get a hold of the basics</li>
-        <li>Work on small projects side by side</li>
-        <li>Munch on peanuts to keep me going!</li>
-      </ul>
+      <h1>
+        <u>String Interpolation</u>
+      </h1>
+      <h3>{`Hello ${fName}, Your Lucky Number is ${luckyNumber}!`}</h3>
     </div>
   );
 }
 
-ReactDom.render(<Greeting />, document.getElementById("root"));
+ReactDom.render(<App />, document.getElementById("root"));
